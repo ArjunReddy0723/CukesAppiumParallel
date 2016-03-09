@@ -1,3 +1,3 @@
 # CukesAppiumParallel
 
- mvn clean package -Dtest=CucumberRunner test
+mvn clean package exec:java -Dexec.mainClass="com.cucumber.parallel.CucumberParallelThread"
