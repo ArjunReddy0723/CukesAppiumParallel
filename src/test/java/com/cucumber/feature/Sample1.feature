@@ -1,4 +1,4 @@
-Feature: This just contains four scenarios that sleeps for one second each
+Feature: This just contains One scenarios that sleeps for one second each
 
   This feature file just sleeps for a 4 seconds (one second each scenario)
   It is not meant to do anything, but sleep

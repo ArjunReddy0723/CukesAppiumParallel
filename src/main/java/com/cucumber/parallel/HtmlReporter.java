@@ -18,7 +18,6 @@ public class HtmlReporter {
 			if (fileEntry.isDirectory()) {
 				listFilesForFolder(fileEntry);
 			} else if (fileEntry.getName().endsWith(".json")) {
-				System.out.println("*******" + fileEntry.getName());
 				list.add(reportOutputDirectory +"/"+fileEntry.getName());
                 
 			}
