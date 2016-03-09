@@ -1,6 +1,4 @@
-package com.cucumber;
-
-import org.junit.Test;
+package com.cucumber.parallel;
 
 import java.io.IOException;
 
@@ -9,11 +7,9 @@ import java.io.IOException;
  */
 public class CucumberRunner {
 
-    CommandPrompt cmd = new CommandPrompt();
+    HtmlReporter htmlReporter = new HtmlReporter();
 
-    @Test
-    public void testApp() throws IOException, InterruptedException {
-
+    public void triggerParallelCukes() throws IOException, InterruptedException {
        String a =  "java -cp "+ System.getProperty("user.dir")+"/libs/cucumber-core-1.2.4.jar:"+
                 System.getProperty("user.dir")+"/libs/gherkin-2.12.2.jar:"+
                 System.getProperty("user.dir")+"/libs/cucumber-html-0.2.3.jar:"+
@@ -23,9 +19,13 @@ public class CucumberRunner {
                 System.getProperty("user.dir")+"/target/test-classes"+
                 " cucumber.api.cli.Main " +
                 "--glue com.cucumber.steps " +
-                System.getProperty("user.dir")+"/src/main/resources/com/cucumber/Sample.feature "
+                System.getProperty("user.dir")+"/src/test/java/com/cucumber/feature/Sample1.feature "
                 + " --plugin json:"+System.getProperty("user.dir")+"/target/sample.feature.json";
          Runtime.getRuntime().exec(a);
+        Thread.sleep(5000);
+         htmlReporter.generateReports();
 
     }
+
+
 }

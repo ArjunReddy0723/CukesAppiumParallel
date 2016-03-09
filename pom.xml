@@ -24,6 +24,11 @@
             <artifactId>cucumber-java</artifactId>
             <version>1.2.4</version>
         </dependency>
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>0.4.0</version>
+        </dependency>
     </dependencies>
     <reporting>
         <plugins>
