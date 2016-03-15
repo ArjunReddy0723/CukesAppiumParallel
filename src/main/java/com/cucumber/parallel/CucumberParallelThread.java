@@ -1,5 +1,7 @@
 package com.cucumber.parallel;
 
+import com.appium.manager.ParallelThread;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -67,8 +69,11 @@ public class CucumberParallelThread {
     }
 
 
-    public static void main(String[] arg){
+    public static void main(String[] arg) throws Exception {
+        ParallelThread parallelThread = new ParallelThread();
+        parallelThread.runner("com.cucumber.parallel");
         CucumberParallelThread cucumberParallelThread = new CucumberParallelThread();
+
         cucumberParallelThread.distributeTests(2,featureFiles);
     }
 }
