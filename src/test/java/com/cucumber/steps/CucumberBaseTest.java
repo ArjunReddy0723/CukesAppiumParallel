@@ -1,31 +1,23 @@
 package com.cucumber.steps;
 
-import com.appium.manager.*;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 
 import java.io.IOException;
 
-public class CucumberBaseTest extends AppiumParallelTest{
+public class CucumberBaseTest{
 	
 	@Before
     public void beforeClass() throws Exception {
-        System.out.println("Inside Before");
-/*        startAppiumServer(getClass().getSimpleName());
-        driver = startAppiumServerInParallel();*/
+        System.out.println("Inside Before"+Thread.currentThread().getId());
+
     }
 
     @After
     public void afterClass() throws InterruptedException, IOException {
-/*        getDriver().quit();
-        killAppiumServer();*/
+        System.out.println("Inside After"+Thread.currentThread().getId());
     }
-    
-    public AppiumDriver<MobileElement> getDriver() {
-        return driver;
-    }
+
 
 
 }

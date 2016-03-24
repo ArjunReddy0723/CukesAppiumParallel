@@ -1,7 +1,5 @@
 package com.cucumber.parallel;
 
-import com.appium.manager.ParallelThread;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,7 +20,7 @@ public class CucumberParallelThread {
 
 
     public void distributeTests(int deviceCount, List<String> feature) {
-        listFilesForFolder(new File("/Users/saikrisv/git/untitled/src/test/java/com/cucumber/feature/"));
+        listFilesForFolder(new File("/Users/saikrisv/git/untitled/src/test/java/com/cucumber/features/"));
         ExecutorService executorService = Executors.newFixedThreadPool(deviceCount);
         for (final String featureFile : feature) {
             executorService.submit(new Runnable() {
@@ -70,10 +68,10 @@ public class CucumberParallelThread {
 
 
     public static void main(String[] arg) throws Exception {
-        ParallelThread parallelThread = new ParallelThread();
-        parallelThread.runner("com.cucumber.parallel");
+/*        ParallelThread parallelThread = new ParallelThread();
+        parallelThread.runner("com.cucumber.parallel");*/
         CucumberParallelThread cucumberParallelThread = new CucumberParallelThread();
 
-        cucumberParallelThread.distributeTests(2,featureFiles);
+        cucumberParallelThread.distributeTests(1,featureFiles);
     }
 }
