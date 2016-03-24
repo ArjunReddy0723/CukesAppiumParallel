@@ -20,7 +20,7 @@ public class CucumberParallelThread {
 
 
     public void distributeTests(int deviceCount, List<String> feature) {
-        listFilesForFolder(new File("/Users/saikrisv/git/untitled/src/test/java/com/cucumber/features/"));
+        listFilesForFolder(new File(System.getProperty("user.dir")+"/src/test/java/com/cucumber/features/"));
         ExecutorService executorService = Executors.newFixedThreadPool(deviceCount);
         for (final String featureFile : feature) {
             executorService.submit(new Runnable() {
