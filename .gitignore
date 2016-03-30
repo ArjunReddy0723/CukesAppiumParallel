@@ -1,3 +1,4 @@
 .idea/*
 /target/*
 CukesAppium.iml
+src/test/java/output/*.java

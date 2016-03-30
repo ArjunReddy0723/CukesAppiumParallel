@@ -1,7 +1,9 @@
 package com.cucumber.parallel;
 
-import java.io.File;
-import java.io.IOException;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -15,24 +17,24 @@ public class CucumberParallelThread {
 
     public CucumberRunner cucumberRunner = new CucumberRunner();
     public HtmlReporter htmlReporter = new HtmlReporter();
-    public static  List<String> featureFiles= new ArrayList<String>();
+    List<Class> testCases = new ArrayList();
 
 
 
-    public void distributeTests(int deviceCount, List<String> feature) {
-        listFilesForFolder(new File(System.getProperty("user.dir")+"/src/test/java/com/cucumber/features/"));
+    public void distributeTests(int deviceCount) throws Exception {
+
+        PackageUtil.getClasses("output").stream().forEach(s -> {
+            if (s.toString().contains("IT")) {
+                System.out.println("forEach: " + testCases.add((Class) s));
+            }
+        });
+
         ExecutorService executorService = Executors.newFixedThreadPool(deviceCount);
-        for (final String featureFile : feature) {
+        for (final Class testCase : testCases) {
             executorService.submit(new Runnable() {
                 public void run() {
-                    System.out.println("Running test file: " + featureFile + Thread.currentThread().getId());
-                    try {
-                        cucumberRunner.triggerParallelCukes(featureFile);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    System.out.println("Running test file: " + testCase + Thread.currentThread().getId());
+                    runTestCase(testCase);
 
                 }
             });
@@ -43,35 +45,19 @@ public class CucumberParallelThread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("ending");
         try {
             Thread.sleep(3000);
             htmlReporter.generateReports();
-        } catch (IOException e) {
-            e.printStackTrace();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-
-    public void listFilesForFolder(final File folder) {
-        for (final File fileEntry : folder.listFiles()) {
-            if (fileEntry.isDirectory()) {
-                listFilesForFolder(fileEntry);
-            } else if (fileEntry.getName().endsWith(".feature")) {
-                featureFiles.add(fileEntry.getName());
-
-            }
+    public void runTestCase(Class testCase) {
+        Result result = JUnitCore.runClasses(testCase);
+        for (Failure failure : result.getFailures()) {
+            System.out.println(failure.toString());
         }
     }
 
-
-    public static void main(String[] arg) throws Exception {
-/*        ParallelThread parallelThread = new ParallelThread();
-        parallelThread.runner("com.cucumber.parallel");*/
-        CucumberParallelThread cucumberParallelThread = new CucumberParallelThread();
-
-        cucumberParallelThread.distributeTests(1,featureFiles);
-    }
 }

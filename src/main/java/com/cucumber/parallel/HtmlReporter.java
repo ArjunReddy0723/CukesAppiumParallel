@@ -1,5 +1,6 @@
 package com.cucumber.parallel;
 
+import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 import org.apache.velocity.exception.VelocityException;
 
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HtmlReporter {
-	static File reportOutputDirectory = new File(System.getProperty("user.dir")+"/target"+"/");
+	static File reportOutputDirectory = new File(System.getProperty("user.dir")+"/target"+"/cucumber-parallel/");
 
 	static List<String> list = new ArrayList<String>();
 
@@ -26,34 +27,25 @@ public class HtmlReporter {
 
 	public void generateReports() throws VelocityException, IOException {
 		listFilesForFolder(reportOutputDirectory);
-		String pluginUrlPath = "";
+		String jenkinsBasePath = "";
 		String buildNumber = "1";
-		String buildProject = "cucumber-appium-parallel";
+		String projectName = "cucumber-jvm";
 		boolean skippedFails = true;
-		boolean pendingFails = true;
+		boolean pendingFails = false;
 		boolean undefinedFails = true;
 		boolean missingFails = true;
-		boolean flashCharts = true;
-		boolean runWithJenkins = true;
-		boolean highCharts = true;
-		boolean parallelTesting = true;
-		ReportBuilder reportBuilder = new ReportBuilder(list, reportOutputDirectory,
-				pluginUrlPath, // String pluginUrlPath
-				buildNumber, // String buildNumber
-				buildProject, // String buildProject,
-				skippedFails, // boolean skippedFails,
-				pendingFails, // boolean pendingFails,
-				undefinedFails, // boolean undefinedFails,
-				missingFails, // boolean missingFails
-				flashCharts, // boolean flashCharts,
-				runWithJenkins, // boolean runWithJenkins,
-				false, // boolean artifactsEnabled,
-				"", // String artifactConfig
-				highCharts, // boolean highCharts
-				parallelTesting // boolean parallelTesting
-		);
+		boolean runWithJenkins = false;
+		boolean parallelTesting = false;
+
+		Configuration configuration = new Configuration(reportOutputDirectory, projectName);
+// optionally only if you need
+		configuration.setStatusFlags(skippedFails, pendingFails, undefinedFails, missingFails);
+		configuration.setParallelTesting(parallelTesting);
+		configuration.setJenkinsBasePath(jenkinsBasePath);
+		configuration.setRunWithJenkins(runWithJenkins);
+		configuration.setBuildNumber(buildNumber);
+		ReportBuilder reportBuilder = new ReportBuilder(list, configuration);
 
 		reportBuilder.generateReports();
 	}
-
 }
