@@ -23,3 +23,4 @@ Feature: This just contains four scenarios that sleeps for one second each
     Given I have the this useless scenario
     When I sleep for 1 seconds
     Then It should finnish
+

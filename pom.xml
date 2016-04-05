@@ -19,6 +19,11 @@
             <version>2.0.0-SNAPSHOT</version>
         </dependency>-->
         <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+        <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java8</artifactId>
             <version>${cucumber.version}</version>

@@ -1,31 +1,14 @@
 package com.cucumber.steps;
 
 import cucumber.api.PendingException;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-import java.io.IOException;
-
 /**
  * Created by saikrisv on 09/03/16.
  */
-public class LoginSteps{
-   /* AppiumParallelTest appiumParallelTest = new AppiumParallelTest();
-    AppiumDriver<MobileElement> driver ;*/
-    @Before
-    public void beforeClass() throws Exception {
-        System.out.println("Inside Before");
-       /* appiumParallelTest.startAppiumServer(getClass().getSimpleName());
-        driver = appiumParallelTest.startAppiumServerInParallel();*/
-    }
-
-    @After
-    public void afterClass() throws InterruptedException, IOException {
-       // appiumParallelTest.killAppiumServer();
-    }
+public class LoginSteps extends DriverManager{
 
     @Given("^i'm on homepage$")
     public void iMOnHomepage() throws Throwable {
