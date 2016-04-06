@@ -12,6 +12,12 @@
         <cucumber.version>1.2.4</cucumber.version>
         <selenium.version>2.48.2</selenium.version>
     </properties>
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
     <dependencies>
 <!--        <dependency>
             <groupId>com.appium.android</groupId>
@@ -51,6 +57,11 @@
             <artifactId>junit</artifactId>
             <version>4.11</version>
         </dependency>
+        <dependency>
+                <groupId>com.github.saikrishna321</groupId>
+                <artifactId>cucumber-jvm-parallel-plugin</artifactId>
+                <version>2.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -65,9 +76,9 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>com.github.temyers</groupId>
+                <groupId>com.github.saikrishna321</groupId>
                 <artifactId>cucumber-jvm-parallel-plugin</artifactId>
-                <version>1.1.2-SNAPSHOT</version>
+                <version>2.0.0</version>
                 <executions>
                     <execution>
                         <id>generateRunners</id>

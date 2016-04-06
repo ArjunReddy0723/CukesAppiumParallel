@@ -8,7 +8,7 @@ import io.appium.java_client.MobileElement;
 
 import java.io.IOException;
 
-public class CucumberBaseTest extends DriverManager {
+public class CucumberBaseTest{
 
     public AppiumDriver<MobileElement> driver;
     public BaseTestServer appiumServer = new BaseTestServer();
@@ -27,6 +27,7 @@ public class CucumberBaseTest extends DriverManager {
     public void afterClass() throws InterruptedException, IOException {
         appiumServer.tearDown();
         System.out.println("Inside After"+Thread.currentThread().getId());
+        getDriver().quit();
     }
 
 
