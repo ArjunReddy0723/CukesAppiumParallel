@@ -12,5 +12,5 @@ public class RunnerCukes {
     public  void testCukesRunner() throws Exception {
         CucumberParallelThread cucumberParallelThread = new CucumberParallelThread();
         cucumberParallelThread.distributeTests(2);
-    }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
 }

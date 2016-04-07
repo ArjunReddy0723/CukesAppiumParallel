@@ -1,0 +1,157 @@
+2016-04-07 08:39:21:140 - info: [Appium] Welcome to Appium v1.5.0 (REV d1d1c56d7fd1d66a3de8822393258f3bf2658bd4)
+2016-04-07 08:39:21:142 - info: [Appium] Non-default server args:
+2016-04-07 08:39:21:143 - info: [Appium]   port: 53750
+2016-04-07 08:39:21:143 - info: [Appium]   bootstrapPort: 53752
+2016-04-07 08:39:21:143 - info: [Appium]   sessionOverride: true
+2016-04-07 08:39:21:143 - info: [Appium]   log: '/Users/saikrisv/git/CukesAppiumParallel/Logpool-1-thread-214'
+2016-04-07 08:39:21:143 - info: [Appium]   chromeDriverPort: 53751
+2016-04-07 08:39:21:144 - info: [Appium]   udid: '192.168.56.102:5555'
+2016-04-07 08:39:21:144 - warn: [Appium] Deprecated server args:
+2016-04-07 08:39:21:144 - warn: [Appium]   -U,--udid => --default-capabilities '{"udid":"192.168.56.102:5555"}'
+2016-04-07 08:39:21:144 - info: [Appium] Default capabilities, which will be added to each request unless overridden by desired capabilities:
+2016-04-07 08:39:21:154 - info: [Appium]   udid: '192.168.56.102:5555'
+2016-04-07 08:39:21:185 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:53750
+2016-04-07 08:39:21:291 - info: [HTTP] --> GET /wd/hub/status 
+2016-04-07 08:39:21:296 - info: [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2016-04-07 08:39:21:307 - info: [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.5.0","revision":"d1d1c56d7fd1d66a3de8822393258f3bf2658bd4"}}
+2016-04-07 08:39:21:313 - info: [HTTP] <-- GET /wd/hub/status 200 19 ms - 121 
+2016-04-07 08:39:21:317 - info: [HTTP] --> GET /wd/hub/status 
+2016-04-07 08:39:21:318 - info: [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2016-04-07 08:39:21:326 - info: [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.5.0","revision":"d1d1c56d7fd1d66a3de8822393258f3bf2658bd4"}}
+2016-04-07 08:39:21:327 - info: [HTTP] <-- GET /wd/hub/status 200 10 ms - 121 
+2016-04-07 08:39:26:334 - info: [HTTP] --> POST /wd/hub/session 
+2016-04-07 08:39:26:347 - info: [MJSONWP] Calling AppiumDriver.createSession() with args: [{"app":"/Users/saikrisv/Documents/workspace/workspace1/TestNGParallelThreadBeforeClass/build/AndroidCalculator.apk","appActivity":"com.android2.ca...
+2016-04-07 08:39:26:349 - info: [Appium] Creating new AndroidDriver session
+2016-04-07 08:39:26:349 - info: [Appium] Capabilities:
+2016-04-07 08:39:26:350 - info: [Appium]   app: '/Users/saikrisv/Documents/workspace/workspace1/TestNGParallelThreadBeforeClass/build/AndroidCalculator.apk'
+2016-04-07 08:39:26:350 - info: [Appium]   appActivity: 'com.android2.calculator3.Calculator'
+2016-04-07 08:39:26:350 - info: [Appium]   package: 'com.android2.calculator3'
+2016-04-07 08:39:26:350 - info: [Appium]   platformVersion: '5.X'
+2016-04-07 08:39:26:350 - info: [Appium]   platformName: 'Android'
+2016-04-07 08:39:26:350 - info: [Appium]   deviceName: 'Android'
+2016-04-07 08:39:26:350 - info: [Appium]   udid: '192.168.56.102:5555'
+2016-04-07 08:39:26:356 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: package.
+2016-04-07 08:39:26:358 - info: [BaseDriver] Session created with session id: e3d6fdd3-9018-4b8f-8688-f5074415e038
+2016-04-07 08:39:26:359 - info: [debug] [AndroidDriver] Getting Java version
+2016-04-07 08:39:26:430 - info: [AndroidDriver] Java version is: 1.8.0_51
+2016-04-07 08:39:26:433 - info: [ADB] Checking whether adb is present
+2016-04-07 08:39:26:439 - info: [ADB] Using adb from /Users/saikrisv/Library/Android/sdk/platform-tools/adb
+2016-04-07 08:39:26:439 - info: [AndroidDriver] Retrieving device list
+2016-04-07 08:39:26:439 - info: [debug] [ADB] Trying to find a connected android device
+2016-04-07 08:39:26:440 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:26:449 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:26:450 - info: [AndroidDriver] Using device: 192.168.56.102:5555
+2016-04-07 08:39:26:450 - info: [ADB] Checking whether adb is present
+2016-04-07 08:39:26:453 - info: [ADB] Using adb from /Users/saikrisv/Library/Android/sdk/platform-tools/adb
+2016-04-07 08:39:26:454 - info: [debug] [ADB] Setting device id to 192.168.56.102:5555
+2016-04-07 08:39:26:454 - info: [BaseDriver] Using local app '/Users/saikrisv/Documents/workspace/workspace1/TestNGParallelThreadBeforeClass/build/AndroidCalculator.apk'
+2016-04-07 08:39:26:455 - info: [debug] [AndroidDriver] Checking whether app is actually present
+2016-04-07 08:39:26:455 - info: [AndroidDriver] Starting Android session
+2016-04-07 08:39:26:458 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","wait-for-device"]
+2016-04-07 08:39:26:469 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:26:479 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:26:479 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","echo","ping"]
+2016-04-07 08:39:26:492 - info: [debug] [Logcat] Starting logcat capture
+2016-04-07 08:39:26:505 - info: [debug] [AndroidDriver] Pushing settings apk to device...
+2016-04-07 08:39:26:506 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","install","/Users/saikrisv/git/appium_master/appium/node_modules/io.appium.settings/bin/settings_apk-debug.apk"]
+2016-04-07 08:39:26:877 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
+2016-04-07 08:39:26:877 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","install","/Users/saikrisv/git/appium_master/appium/node_modules/appium-unlock/bin/unlock_apk-debug.apk"]
+2016-04-07 08:39:27:227 - info: [ADB] Getting device platform version
+2016-04-07 08:39:27:227 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:27:243 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:27:243 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","getprop","ro.build.version.release"]
+2016-04-07 08:39:27:257 - info: [debug] [AndroidDriver] Parsing package and activity from app manifest
+2016-04-07 08:39:27:258 - info: [ADB] Checking whether aapt is present
+2016-04-07 08:39:27:261 - info: [ADB] Using aapt from /Users/saikrisv/Library/Android/sdk/build-tools/23.0.2/aapt
+2016-04-07 08:39:27:261 - info: [ADB] Extracting package and launch activity from manifest
+2016-04-07 08:39:27:267 - info: [debug] [ADB] badging package: com.android2.calculator3
+2016-04-07 08:39:27:267 - info: [debug] [ADB] badging act: com.android2.calculator3.Calculator
+2016-04-07 08:39:27:268 - info: [debug] [AndroidDriver] Parsed package and activity are: com.android2.calculator3/com.android2.calculator3.Calculator
+2016-04-07 08:39:27:268 - info: [debug] [ADB] Uninstalling com.android2.calculator3
+2016-04-07 08:39:27:268 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:27:276 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:27:276 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","am","force-stop","com.android2.calculator3"]
+2016-04-07 08:39:27:574 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","uninstall","com.android2.calculator3"]
+2016-04-07 08:39:27:937 - info: [ADB] App was uninstalled
+2016-04-07 08:39:28:543 - info: [AndroidDriver] Remote apk path is /data/local/tmp/0b1791da498ba0fdd9cb6c3981a4b783.apk
+2016-04-07 08:39:28:543 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:28:554 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:28:554 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","ls","/data/local/tmp/0b1791da498ba0fdd9cb6c3981a4b783.apk"]
+2016-04-07 08:39:28:567 - info: [debug] [AndroidDriver] Checking if app is installed
+2016-04-07 08:39:28:568 - info: [debug] [ADB] Getting install status for com.android2.calculator3
+2016-04-07 08:39:28:568 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:28:578 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:28:578 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","getprop","ro.build.version.sdk"]
+2016-04-07 08:39:28:591 - info: [debug] [ADB] Device API level: 19
+2016-04-07 08:39:28:592 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:28:600 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:28:602 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","pm","list","packages","-3","com.android2.calculator3"]
+2016-04-07 08:39:28:902 - info: [debug] [ADB] App is  not installed
+2016-04-07 08:39:28:903 - info: [AndroidDriver] Apk is not yet installed
+2016-04-07 08:39:28:903 - info: [AndroidDriver] installing apk from remote
+2016-04-07 08:39:28:904 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:28:912 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:28:913 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","mkdir","-p","/data/local/tmp"]
+2016-04-07 08:39:28:926 - info: [AndroidDriver] Clearing out any existing remote apks with the same hash
+2016-04-07 08:39:28:927 - info: [debug] [AndroidDriver] Removing any old apks
+2016-04-07 08:39:28:927 - info: [debug] [AndroidDriver] Except ["0b1791da498ba0fdd9cb6c3981a4b783"]
+2016-04-07 08:39:28:927 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:28:936 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:28:936 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","ls","/data/local/tmp/*.apk"]
+2016-04-07 08:39:28:953 - info: [debug] [ADB] Uninstalling com.android2.calculator3
+2016-04-07 08:39:28:953 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:28:961 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:28:961 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","am","force-stop","com.android2.calculator3"]
+2016-04-07 08:39:29:255 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","uninstall","com.android2.calculator3"]
+2016-04-07 08:39:29:567 - info: [ADB] App was not uninstalled, maybe it wasn't on device?
+2016-04-07 08:39:29:568 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:29:577 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:29:578 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","pm","install","-r","/data/local/tmp/0b1791da498ba0fdd9cb6c3981a4b783.apk"]
+2016-04-07 08:39:30:198 - info: [debug] [AndroidDriver] Extracting strings from apk /Users/saikrisv/Documents/workspace/workspace1/TestNGParallelThreadBeforeClass/build/AndroidCalculator.apk null /var/folders/wd/9s7s80fd66j88vf5119rwt300000gp/T/com.android2.calculator3
+2016-04-07 08:39:30:198 - info: [debug] [ADB] Extracting strings for language: default
+2016-04-07 08:39:30:199 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:30:208 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:30:208 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","getprop","persist.sys.language"]
+2016-04-07 08:39:30:220 - info: [debug] [ADB] Current device property 'persist.sys.language': en
+2016-04-07 08:39:30:650 - info: [debug] [ADB] Reading strings from converted strings.json
+2016-04-07 08:39:30:652 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","push","/var/folders/wd/9s7s80fd66j88vf5119rwt300000gp/T/com.android2.calculator3/strings.json","/data/local/tmp"]
+2016-04-07 08:39:30:672 - info: [debug] [AndroidBootstrap] Watching for bootstrap disconnect
+2016-04-07 08:39:30:673 - info: [debug] [ADB] Forwarding system: 53752 to device: 4724
+2016-04-07 08:39:30:673 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","forward","tcp:53752","tcp:4724"]
+2016-04-07 08:39:30:676 - info: [debug] [UiAutomator] Starting UiAutomator
+2016-04-07 08:39:30:676 - info: [debug] [UiAutomator] Moving to state 'starting'
+2016-04-07 08:39:30:676 - info: [debug] [UiAutomator] Parsing uiautomator jar
+2016-04-07 08:39:30:676 - info: [debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+2016-04-07 08:39:30:677 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","push","/Users/saikrisv/git/appium_master/appium/node_modules/appium-android-bootstrap/bootstrap/bin/AppiumBootstrap.jar","/data/local/tmp/"]
+2016-04-07 08:39:30:740 - info: [debug] [ADB] Attempting to kill all uiautomator processes
+2016-04-07 08:39:30:740 - info: [debug] [ADB] Getting all processes with uiautomator
+2016-04-07 08:39:30:741 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:30:750 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:30:750 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","ps","uiautomator"]
+2016-04-07 08:39:30:765 - info: [ADB] No uiautomator process found to kill, continuing...
+2016-04-07 08:39:30:767 - info: [debug] [UiAutomator] Starting UIAutomator
+2016-04-07 08:39:30:767 - info: [debug] [ADB] Creating ADB subprocess with args: -P, 5037, -s, 192.168.56.102:5555, shell, uiautomator, runtest, AppiumBootstrap.jar, -c, io.appium.android.bootstrap.Bootstrap, -e, pkg, com.android2.calculator3, -e, disableAndroidWatchers, false, -e, acceptSslCerts, false
+2016-04-07 08:39:30:874 - info: [debug] [UiAutomator] Moving to state 'online'
+2016-04-07 08:39:30:876 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Loading json...
+2016-04-07 08:39:30:876 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] json loading complete.
+2016-04-07 08:39:30:876 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
+2016-04-07 08:39:30:878 - info: [AndroidBootstrap] Android bootstrap socket is now connected
+2016-04-07 08:39:30:879 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:30:882 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+2016-04-07 08:39:30:888 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:30:890 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","dumpsys","window"]
+2016-04-07 08:39:30:905 - info: [AndroidDriver] Screen already unlocked, doing nothing
+2016-04-07 08:39:30:906 - info: [debug] [ADB] Device API level: 19
+2016-04-07 08:39:30:906 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:30:914 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:30:915 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","am","start","-n","com.android2.calculator3/com.android2.calculator3.Calculator","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+2016-04-07 08:39:31:500 - info: [debug] [ADB] Waiting for pkg: 'com.android2.calculator3' and activity: 'com.android2.calculator3.Calculator' to be focused
+2016-04-07 08:39:31:500 - info: [debug] [ADB] Possible activities, to be checked: com.android2.calculator3.Calculator, .Calculator, .com.android2.calculator3.Calculator
+2016-04-07 08:39:31:501 - info: [debug] [ADB] Getting focused package and activity
+2016-04-07 08:39:31:501 - info: [debug] [ADB] Getting connected devices...
+2016-04-07 08:39:31:514 - info: [debug] [ADB] 2 device(s) connected
+2016-04-07 08:39:31:514 - info: [debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: ["-P",5037,"-s","192.168.56.102:5555","shell","dumpsys","window","windows"]
+2016-04-07 08:39:31:558 - info: [debug] [ADB] Found package: 'com.android2.calculator3' and activity: '.Calculator'
+2016-04-07 08:39:31:559 - info: [Appium] New AndroidDriver session created successfully, session e3d6fdd3-9018-4b8f-8688-f5074415e038 added to master session list
+2016-04-07 08:39:31:560 - info: [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":tr...
+2016-04-07 08:39:31:561 - info: [HTTP] <-- POST /wd/hub/session 200 5226 ms - 903 
