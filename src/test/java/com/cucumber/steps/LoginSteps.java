@@ -1,5 +1,6 @@
 package com.cucumber.steps;
 
+import com.cucumber.listener.ExtentCucumberFormatter;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -9,7 +10,7 @@ import org.openqa.selenium.By;
 /**
  * Created by saikrisv on 09/03/16.
  */
-public class LoginSteps extends DriverManager{
+public class LoginSteps extends ExtentCucumberFormatter{
 
     @Given("^i'm on homepage$")
     public void iMOnHomepage() throws Throwable {

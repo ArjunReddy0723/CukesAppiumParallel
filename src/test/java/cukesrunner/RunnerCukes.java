@@ -1,6 +1,6 @@
 package cukesrunner;
 
-import com.cucumber.parallel.CucumberParallelThread;
+import com.appium.manager.ParallelThread;
 import org.junit.Test;
 
 /**
@@ -10,7 +10,7 @@ public class RunnerCukes {
 
     @Test
     public  void testCukesRunner() throws Exception {
-        CucumberParallelThread cucumberParallelThread = new CucumberParallelThread();
-        cucumberParallelThread.distributeTests(2);
+        ParallelThread parallelThread = new ParallelThread();
+        parallelThread.runner("");
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     }
 }

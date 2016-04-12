@@ -1,10 +1,11 @@
 package com.cucumber.steps;
 
+import com.cucumber.listener.ExtentCucumberFormatter;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class SampleSteps extends DriverManager{
+public class SampleSteps extends ExtentCucumberFormatter {
 
     @Given("^I have the this useless scenario$")
     public void uselessScenario() {

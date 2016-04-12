@@ -1,3 +1,4 @@
+@smoke
 Feature: This just contains four scenarios that sleeps for one second each
 
   This feature file just sleeps for a 4 seconds (one second each scenario)
@@ -7,6 +8,12 @@ Feature: This just contains four scenarios that sleeps for one second each
   Scenario: Example 1 that sleep 1 seconds
     Given I accept the tip screen
     When I click on 2 number
+    And I click on 3 number
+    Then It should finnish
+
+  Scenario: Example 2 that sleep 1 seconds
+    Given I accept the tip screen
+    When I click on 22 number
     And I click on 3 number
     Then It should finnish
 

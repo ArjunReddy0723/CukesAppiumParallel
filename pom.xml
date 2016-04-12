@@ -19,66 +19,76 @@
         </repository>
     </repositories>
     <dependencies>
-<!--        <dependency>
+        <dependency>
             <groupId>com.appium.android</groupId>
             <artifactId>TestDistribution</artifactId>
-            <version>2.0.0-SNAPSHOT</version>
-        </dependency>-->
-        <dependency>
-            <groupId>io.appium</groupId>
-            <artifactId>java-client</artifactId>
-            <version>3.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-java8</artifactId>
-            <version>${cucumber.version}</version>
-            <scope>test</scope>
+            <version>2.7.7-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>${cucumber.version}</version>
-            <scope>test</scope>
+            <version>1.2.4</version>
         </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-server</artifactId>
-            <version>${selenium.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.masterthought</groupId>
-            <artifactId>cucumber-reporting</artifactId>
-            <version>2.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-        </dependency>
-        <dependency>
-                <groupId>com.github.saikrishna321</groupId>
-                <artifactId>cucumber-jvm-parallel-plugin</artifactId>
-                <version>2.0.0</version>
-        </dependency>
+        <!-- <dependency>
+             <groupId>io.appium</groupId>
+             <artifactId>java-client</artifactId>
+             <version>3.4.0</version>
+         </dependency>
+         <dependency>
+             <groupId>info.cukes</groupId>
+             <artifactId>cucumber-java8</artifactId>
+             <version>${cucumber.version}</version>
+             <scope>test</scope>
+         </dependency>
+         <dependency>
+             <groupId>info.cukes</groupId>
+             <artifactId>cucumber-junit</artifactId>
+             <version>${cucumber.version}</version>
+             <scope>test</scope>
+         </dependency>
+         <dependency>
+             <groupId>org.seleniumhq.selenium</groupId>
+             <artifactId>selenium-server</artifactId>
+             <version>${selenium.version}</version>
+             <scope>test</scope>
+         </dependency>
+         <dependency>
+             <groupId>net.masterthought</groupId>
+             <artifactId>cucumber-reporting</artifactId>
+             <version>2.1.0</version>
+         </dependency>
+         <dependency>
+             <groupId>junit</groupId>
+             <artifactId>junit</artifactId>
+             <version>4.11</version>
+         </dependency>
+         <dependency>
+                 <groupId>com.github.saikrishna321</groupId>
+                 <artifactId>cucumber-jvm-parallel-plugin</artifactId>
+                 <version>2.0.0</version>
+         </dependency>-->
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
+            </plugin>
+            <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
+                <version>2.0.2</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>com.github.saikrishna321</groupId>
                 <artifactId>cucumber-jvm-parallel-plugin</artifactId>
-                <version>2.0.0</version>
+                <version>2.0.6</version>
                 <executions>
                     <execution>
                         <id>generateRunners</id>
@@ -90,8 +100,7 @@
                             <outputDirectory>src/test/java/output</outputDirectory>
                             <glue>com.cucumber.steps</glue>
                             <featuresDirectory>src/test/resources/features/</featuresDirectory>
-                            <cucumberOutputDir>target/cucumber-parallel</cucumberOutputDir>
-                            <format>json,html</format>
+                            <cucumberOutputDir>target</cucumberOutputDir>
                             <tags>"~@ignored"</tags>
                         </configuration>
                     </execution>
